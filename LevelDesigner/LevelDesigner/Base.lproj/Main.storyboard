@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LevelDesigner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m82-hX-JqC">
+                                <rect key="frame" x="20" y="913" width="79" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dXs-ZY-VW5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UkB-OM-R2h">
+                                <rect key="frame" x="20" y="968" width="79" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cWf-IS-QF6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge6-oI-v1y">
+                                <rect key="frame" x="113" y="913" width="79" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Load">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dGw-lg-DxA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jm-LQ-zEh">
+                                <rect key="frame" x="113" y="968" width="79" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X4Z-Vp-hrH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnY-cz-ntm">
+                                <rect key="frame" x="614" y="927" width="71" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="IMG_2916.png" image="erase"/>
+                                <connections>
+                                    <action selector="ColorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CAM-ls-VUC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCS-z0-uLz">
+                                <rect key="frame" x="281" y="910" width="71" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="bubble-blue.png" image="bubble-blue"/>
+                                <connections>
+                                    <action selector="ColorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LzG-PT-SQt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHe-mp-aES">
+                                <rect key="frame" x="349" y="949" width="71" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="bubble-green.png" image="bubble-green"/>
+                                <connections>
+                                    <action selector="ColorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h8j-tf-1GE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6I-5f-NbK">
+                                <rect key="frame" x="415" y="910" width="71" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="bubble-orange.png" image="bubble-orange"/>
+                                <connections>
+                                    <action selector="ColorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cdx-Ho-v1A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeV-JA-Eqw">
+                                <rect key="frame" x="482" y="949" width="71" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="bubble-red.png" image="bubble-red"/>
+                                <connections>
+                                    <action selector="ColorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B7k-02-9Zv"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kn3-o8-XWQ">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="905"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLf-jx-Kyn">
+                                        <rect key="frame" x="-20" y="-20" width="808" height="159"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="6Ec-rc-Og3" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="AQL-IX-vnz" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="84" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="0ak-3W-0Bc" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="148" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="fSe-Np-viY" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="212" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="t7N-Kv-vV0" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="276" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="1K3-hP-vU8" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="340" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="8jK-Tc-YNN" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="404" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="Fwx-Cp-lUG" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="468" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="Ib5-FW-l1A" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="532" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="d17-ld-Il4" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="596" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="IBM-ch-6Ur" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="660" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="lAd-XX-uAK" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="724" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="Znm-af-WyN" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="52" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="kH0-Mq-Zec" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="116" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="5mb-ca-nCQ" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="180" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="4NK-9T-gNb" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="244" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="3df-1y-UKd" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="308" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="UKc-6u-0p4" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="372" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="Qzb-As-ymR" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="436" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="SC2-wp-x2t" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="500" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="hyd-OR-TDv" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="564" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="ZFr-i4-1c9" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="628" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="WLj-oO-kOq" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="692" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </scrollView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cw2-zu-OLv">
+                                        <rect key="frame" x="-20" y="90" width="808" height="159"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="TVv-PD-gg7" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="7qB-s6-NRp" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="84" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="OAk-1f-12g" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="148" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="msI-AA-96Q" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="212" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="3SF-sA-akg" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="276" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="spP-ow-eGs" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="340" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="Fie-8Y-ua5" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="404" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="lAT-fG-N6i" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="468" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="kj7-ag-7bg" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="532" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="ZBR-D2-0KV" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="596" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="gOH-pm-7Wz" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="660" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="76S-Jw-oW5" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="724" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="FNv-UE-vMg" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="52" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="oOR-nZ-2xK" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="116" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="1p3-cN-ZyX" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="180" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="EP1-j8-jKl" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="244" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="bLc-IX-L5V" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="308" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="AYa-Hp-jpz" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="372" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="vCN-HY-ezK" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="436" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="MHs-uB-rHz" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="500" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="TFQ-kM-RYN" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="564" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="42B-z1-JNt" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="628" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="MH6-Qw-cXq" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="692" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </scrollView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnU-GV-NxX">
+                                        <rect key="frame" x="-20" y="200" width="808" height="159"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="WbF-Rb-Zsy" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="ly5-sD-qar" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="84" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="9c4-yd-ni1" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="148" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="ekf-GT-efY" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="212" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="2bR-BL-Jwa" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="276" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="BsD-8U-N5R" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="340" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="e2x-St-HpB" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="404" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="56x-Dr-hVP" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="468" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="q4x-da-0u7" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="532" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="fnD-Fh-mCT" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="596" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="Mki-Y5-3so" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="660" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="b35-XB-FSB" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="724" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="cT4-Xi-7rN" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="52" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="SAJ-lN-65P" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="116" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="pMb-I7-gJg" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="180" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="kfZ-Kk-bb2" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="244" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="dT2-1p-b9I" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="308" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="65Q-3O-lbb" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="372" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="hzB-5l-Xdp" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="436" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="UFu-7h-4hQ" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="500" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="C30-O6-1s9" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="564" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="971-Qa-wZd" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="628" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="cCa-7g-f3g" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="692" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </scrollView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duJ-hK-JZp">
+                                        <rect key="frame" x="-20" y="311" width="808" height="159"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="V0X-y5-wKT" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="SRl-yM-XW9" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="84" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="kh5-pI-xN7" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="148" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="pxq-R0-UZP" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="212" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="5Kn-FG-TsA" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="276" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="DDn-xM-IeR" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="340" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="LRW-gz-In8" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="404" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="bB6-Xr-LRW" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="468" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="LPQ-i9-kaj" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="532" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="Nyz-IN-T7O" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="596" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="kKp-rQ-eEn" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="660" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="FPD-rs-fpC" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="724" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="TTr-nl-ky5" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="52" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="Odo-jr-UEX" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="116" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="3ib-c1-Kd0" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="180" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="N0h-Lx-3bN" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="244" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="MJN-Hv-Vb2" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="308" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="DZA-tr-SJ9" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="372" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="OO9-CR-uBY" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="436" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="dOu-ex-EnC" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="500" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="1G1-LX-fRa" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="564" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="qI0-xG-kdj" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="628" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="Jma-ym-qJf" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="692" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </scrollView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yQ-yJ-4x3">
+                                        <rect key="frame" x="-20" y="421" width="808" height="159"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="frE-8j-ELO" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="05h-3i-b4e" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="84" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="3Le-il-sks" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="148" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="b9S-PD-Q5k" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="212" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="8h7-nl-9SL" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="276" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="lSe-a6-sm5" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="340" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="0WF-O5-zIR" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="404" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="Vfa-lk-DdG" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="468" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="doV-jF-EnS" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="532" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="F73-jl-vl8" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="596" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="8tb-yE-Phf" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="660" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="WQQ-fc-kTr" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="724" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="zvH-di-8kd" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="52" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="8Rc-me-bR2" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="116" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="3pP-XR-7Wh" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="180" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="oNm-VC-PNm" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="244" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="n0C-yX-tV2" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="308" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="9vA-ik-QTJ" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="372" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="xTL-gp-7AK" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="436" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="Sq0-UO-7vA" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="500" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="OIx-qi-w09" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="564" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="Ss0-DF-Inu" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="628" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="qAp-a8-24M" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="692" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </scrollView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjh-Yr-PbZ">
+                                        <rect key="frame" x="-20" y="531" width="808" height="159"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="7fN-5d-NNR" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="OOA-9h-jvx" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="84" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="exj-xs-lGS" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="148" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="Cjd-gS-eub" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="212" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="uQE-w3-FbC" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="276" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="jVT-29-aJN" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="340" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="Smt-3c-7NM" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="404" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="Ihs-R6-JDC" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="468" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="oYy-gS-J8J" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="532" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="InQ-tt-g9G" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="596" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="fwi-F5-xP7" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="660" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="bLc-Rh-7dF" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="724" y="20" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="7sQ-ty-8S3" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="52" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="LnO-p9-aS8" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="116" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="cOj-Jt-mSk" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="180" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="HKW-ox-LXb" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="244" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="vaj-r5-73P" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="308" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="Cta-Ch-sjV" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="372" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="rIB-aj-MEU" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="436" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="3vQ-gt-ESq" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="500" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="YZR-zq-qqi" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="564" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="Jog-6t-lHh" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="628" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="15I-Ak-Ion" customClass="circularview" customModule="LevelDesigner" customModuleProvider="target">
+                                                <rect key="frame" x="692" y="75" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </scrollView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMG_2916" translatesAutoresizingMaskIntoConstraints="NO" id="jDe-Hy-zQn">
+                                        <rect key="frame" x="352" y="857" width="64" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="gameArea" destination="Kn3-o8-XWQ" id="bcx-7K-Xeu"/>
+                        <outlet property="gamebubble1" destination="lLf-jx-Kyn" id="w4L-ig-c2q"/>
+                        <outlet property="gamebubble2" destination="cw2-zu-OLv" id="HFe-zo-HaR"/>
+                        <outlet property="gamebubble3" destination="qnU-GV-NxX" id="rdI-cN-3Eb"/>
+                        <outlet property="gamebubble4" destination="duJ-hK-JZp" id="KCo-7h-oBZ"/>
+                        <outlet property="gamebubble5" destination="7yQ-yJ-4x3" id="DEK-Db-t80"/>
+                        <outlet property="gamebubble6" destination="Jjh-Yr-PbZ" id="DBu-5N-SRe"/>
+                        <outlet property="movingBubble" destination="jDe-Hy-zQn" id="3Ni-pU-rNr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.59375" y="38.671875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_2916" width="256" height="256"/>
+        <image name="bubble-blue" width="168" height="168"/>
+        <image name="bubble-green" width="168" height="168"/>
+        <image name="bubble-orange" width="168" height="168"/>
+        <image name="bubble-red" width="168" height="168"/>
+        <image name="erase" width="168" height="168"/>
+    </resources>
+</document>
